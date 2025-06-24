@@ -1,4 +1,3 @@
-
 import { BookOpen, Lightbulb, Heart, Sparkles } from 'lucide-react';
 
 const Hero = () => {
@@ -50,6 +49,15 @@ const Hero = () => {
           <p className="text-lg text-gray-500 mb-12 max-w-xl mx-auto animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
             Join us in exploring a new way to support your passion for teaching and nurture the growth you inspire every day.
           </p>
+
+          {/* Product Purpose Statement */}
+          <div className="mb-12 animate-fade-in-up" style={{ animationDelay: '1s' }}>
+            <div className="max-w-3xl mx-auto bg-white/40 backdrop-blur-sm rounded-2xl p-6 border border-white/20 shadow-sm">
+              <p className="text-lg md:text-xl text-gray-700 font-medium leading-relaxed">
+                Give feedback to a student in 30 seconds — we'll turn it into a professional report that parents can understand.
+              </p>
+            </div>
+          </div>
 
           {/* Decorative element */}
           <div className="flex justify-center mb-8 animate-fade-in-up" style={{ animationDelay: '0.8s' }}>
