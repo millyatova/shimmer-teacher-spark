@@ -1,4 +1,5 @@
 
+
 import { BookOpen, Lightbulb, Heart, Sparkles } from 'lucide-react';
 
 const Hero = () => {
@@ -14,6 +15,15 @@ const Hero = () => {
 
       <div className="container mx-auto px-6 text-center relative z-10">
         <div className="max-w-4xl mx-auto">
+          {/* Logo */}
+          <div className="mb-12 animate-fade-in-up">
+            <img 
+              src="/lovable-uploads/71d10cfa-9418-41aa-b8b3-7763aa4ef06e.png" 
+              alt="EduTrack Logo" 
+              className="h-16 md:h-20 mx-auto"
+            />
+          </div>
+
           {/* Main Visual Element */}
           <div className="mb-8 animate-fade-in-up">
             <div className="relative inline-block">
