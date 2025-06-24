@@ -1,3 +1,4 @@
+
 import { BookOpen, Lightbulb, Heart, Sparkles } from 'lucide-react';
 
 const Hero = () => {
@@ -52,7 +53,10 @@ const Hero = () => {
 
           {/* Product Purpose Statement */}
           <div className="mb-12 animate-fade-in-up" style={{ animationDelay: '1s' }}>
-            <div className="max-w-3xl mx-auto bg-white/40 backdrop-blur-sm rounded-2xl p-6 border border-white/20 shadow-sm">
+            <div className="max-w-3xl mx-auto bg-white/80 backdrop-blur-md rounded-2xl p-8 border border-warm-blue-200/30 shadow-lg">
+              <div className="flex items-center justify-center mb-4">
+                <div className="w-12 h-1 bg-gradient-to-r from-warm-blue-500 to-soft-green-500 rounded-full"></div>
+              </div>
               <p className="text-lg md:text-xl text-gray-700 font-medium leading-relaxed">
                 Give feedback to a student in 30 seconds — we'll turn it into a professional report that parents can understand.
               </p>
