@@ -2,7 +2,7 @@
 
 import { BookOpen, Lightbulb, Heart, Sparkles } from 'lucide-react';
 
-const Hero = () => {
+const Hero = ({ title, subtitle }: { title: string, subtitle: string }) => {
   return (
     <div className="relative bg-gradient-to-br from-warm-blue-50 via-white to-soft-green-50 min-h-screen flex items-center justify-center overflow-hidden">
       {/* Floating background elements */}
@@ -18,7 +18,7 @@ const Hero = () => {
           {/* Logo */}
           <div className="mb-12 animate-fade-in-up">
             <img 
-              src="/lovable-uploads/71d10cfa-9418-41aa-b8b3-7763aa4ef06e.png" 
+              src="/lovable-uploads/71d10cfa-9418-41aa-b8b3-7763aa4ef06e.svg" 
               alt="EduTrack Logo" 
               className="h-16 md:h-20 mx-auto"
             />
@@ -43,18 +43,12 @@ const Hero = () => {
 
           {/* Main Headline */}
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-800 mb-6 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-            Let's Make{' '}
-            <span className="bg-gradient-to-r from-warm-blue-600 to-soft-green-600 bg-clip-text text-transparent">
-              Teaching
-            </span>{' '}
-            <span className="bg-gradient-to-r from-warm-yellow-500 to-warm-yellow-600 bg-clip-text text-transparent">
-              Shine
-            </span>
+            {title}
           </h1>
 
           {/* Sub-headline */}
           <p className="text-xl md:text-2xl text-gray-600 mb-4 max-w-2xl mx-auto leading-relaxed animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
-            Built with care to empower incredible educators like you.
+            {subtitle}
           </p>
           
           <p className="text-lg text-gray-500 mb-12 max-w-xl mx-auto animate-fade-in-up" style={{ animationDelay: '0.6s' }}>

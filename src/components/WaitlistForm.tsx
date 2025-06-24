@@ -5,7 +5,7 @@ import { Input } from '@/components/ui/input';
 import { Mail, Phone, Sparkles } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 
-const WaitlistForm = () => {
+const WaitlistForm = ({ title, subtitle, placeholder, buttonText }: { title: string, subtitle: string, placeholder: string, buttonText: string }) => {
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -41,10 +41,10 @@ const WaitlistForm = () => {
           </div>
           
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-            Get Early Access
+            {title}
           </h2>
           <p className="text-lg text-gray-600 max-w-lg mx-auto">
-            Be among the first to experience something special designed just for educators like you.
+            {subtitle}
           </p>
         </div>
 
@@ -55,7 +55,7 @@ const WaitlistForm = () => {
                 <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <Input
                   type="email"
-                  placeholder="Your email address"
+                  placeholder={placeholder}
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
@@ -89,7 +89,7 @@ const WaitlistForm = () => {
               ) : (
                 <div className="flex items-center justify-center space-x-2">
                   <Sparkles className="w-5 h-5" />
-                  <span>Join the Waitlist</span>
+                  <span>{buttonText}</span>
                 </div>
               )}
             </Button>
