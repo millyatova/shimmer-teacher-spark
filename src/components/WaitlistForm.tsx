@@ -15,16 +15,31 @@ const WaitlistForm = ({ title, subtitle, placeholder, buttonText }: { title: str
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    setTimeout(() => {
-      toast({
-        title: "Welcome to the waitlist! 🎉",
-        description: "Thank you for joining us on this exciting journey. We'll be in touch soon!",
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxD9MTJPmB6B7P0a0WunUozaiVsAuYL4NRCulVippKt-mDwV4nRG8uOZXHdjyBDa_MK/exec';
+    try {
+      await fetch(scriptURL, { 
+        method: 'POST', 
+        body: JSON.stringify({ email, phone }),
+        mode: 'no-cors',
       });
+
+      toast({
+        title: "Successfully Sent!",
+        description: "Thank you for joining the waitlist. We'll be in touch soon!",
+      });
+
       setEmail('');
       setPhone('');
+    } catch (error) {
+      console.error('Error!', error);
+      toast({
+        title: "Error",
+        description: "Could not submit the form. Please try again.",
+        variant: 'destructive',
+      });
+    } finally {
       setIsSubmitting(false);
-    }, 1000);
+    }
   };
 
   return (
